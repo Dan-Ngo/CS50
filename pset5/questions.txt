@@ -1,0 +1,66 @@
+0.  What is pneumonoultramicroscopicsilicovolcanoconiosis?
+        a pneumoconiosis caused by inhalation of very fine silicate or quartz dust
+        
+1.  According to its man page, what does getrusage do?
+        getrusage returns resource usage by calling process or its children or 
+        calling thread.
+        
+2.  Per that same man page, how many members are in a variable of type struct rusage?
+        16
+    
+3.  Why do you think we pass before and after by reference (instead of by value) 
+    to calculate, even though we’re not changing their contents?
+        passing by reference saves memory and time that would have been spent creating
+        the variable to hold the value
+        
+4.  Explain as precisely as possible, in a paragraph or more, how main goes about 
+    reading words from a file. In other words, convince us that you indeed understand 
+    how that function’s for loop works.
+        fgetc takes in a character from the stream which contains a string (or 
+        what is left of the string).  That character is then tested to see if it is 
+        in the alphabet or a apostrophe.  Character is added to a word index of 
+        max length and then the index is incremented to be ready for the next
+        character.  Strings that contain numbers or are longer than max string
+        are discarded.  If the first two if statements are skipped but index is
+        greater than zero, then a whole word must have been found.  Add a 
+        null terminator to denotate the end of word.  Check spelling of the word.
+    
+5.  Why do you think we used fgetc to read each word’s characters one at a time rather 
+    than use fscanf with a format string like "%s" to read whole words at a time? Put 
+    another way, what problems might arise by relying on fscanf alone?
+        In order for our spell checker to work we want to check each character at a time
+        so it makes sense to use fgetc instead of reading in a string.  Problems could be
+        that words must be seperated by space, tab, or new lines to be seperate words.
+    
+6.  Why do you think we declared the parameters for check and load as const?
+     They are const because you wanted it to be read only.  This assure that the
+     parameter passed cannot be modified especially since it is being passed by
+     reference.
+    
+7.  What data structure(s) did you use to implement your spell-checker? Be sure not to 
+    leave your answer at just "hash table," "trie," or the like. Expound on what’s inside 
+    ach of your "nodes."
+    I used a trie which was implemented with a struct with 27 members for each letter
+    of the alphabet and apostrophe with one pointer to a similar struct and a value to
+    tell if this was a END OF WORD.  The base struct was a null which was what every "word"
+    starts with.  Each pointer had a different letter value.  For example "bad" would be 
+    pointers [1] -> [0] -> [3].  Each word would have a END OF WORD == TRUE showing
+    that the trail of pointers created a word.  You can always continue of course if
+    there is a even longer word that can be formed.
+    
+8.  How slow was your code the first time you got it working correctly?
+    It was "fast".  I don't know what the terms of fast or slow are but when I managed
+    to get the program to work, it always completed under a second.
+    
+9.  What kinds of changes, if any, did you make to your code in order to improve its performance?
+    I didn't make any changes.
+    
+10. Do you feel that your code has any bottlenecks that you were not able to chip away at?
+    I tried to work on the unload to free nodes faster. In order to do this I tried to have 
+    another variable to store the previous location of the pointer and the count to save the 
+    current position for when another pointer was discovered and when I freed the next pointer 
+    I would revert back to this.  My current function just sets the pointer back to the root and
+    the count back to 0 so the pointer and counter would have to climb back to its last position.
+    My next implementation would have allowed me to go back to the previous node for every other
+    pointer. I predicted that this would cut the time of my unload function by at least half but 
+    I was unable to implement this without segmentation faults.
