@@ -1,6 +1,7 @@
 # CS50
 Harvards CS50 Coursework
 
+```
 pset1
   greedy.c - Outputs smallest required number of coins for given value
 pset2
@@ -27,3 +28,4 @@ hacker1
 hacker2
   crack.c - Program to crack DES encryption algorithm (Spent a lot of time on this)
   initials.c - Program to output initials of given name
+```
