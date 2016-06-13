@@ -1,0 +1,56 @@
+0.  How many different colors does each format support?
+        JPEG - 16.7 million colors
+        BMP - 4.29 billion colors
+        GIF - 256 colors
+        PNG - 256 to 16.7 million colors
+1.  Which of the formats supports animation?
+        GIF supports animation
+2.  What’s the difference between lossy and lossless compression?
+        lossy compression reduces the file size at expense of image
+        quality.  Lossless keeps all image information and is therefore
+        bigger in file size.
+3.  Which of these formats is lossy-compressed?
+        JPG
+4.  What happens, technically speaking, when a file is deleted on a FAT file system?
+        The data pointing to that file is erased but the file itself is kept intact
+        until either written over or restored.
+5.  What can someone like you do to ensure (with high probability) that files you delete cannot be recovered?
+        Destroy the hard drive or overwrite all data on the hard drive
+6.  What’s stdint.h?
+        stdint.h defines the maximum and minimum allowable values in the form of macros.
+7.  What’s the point of using uint8_t, uint32_t, int32_t, and uint16_t in a program?
+        In order to specify the exact size of uint or int
+8.  How many bytes is a BYTE, a DWORD, a LONG, and a WORD, respectively?
+        BYTE = 8 / 8 = 1
+        DWORD = 32 / 8 = 4
+        LONG = 32 / 8 = 4
+        WORD = 16 / 8 = 2
+9. What (in ASCII, decimal, or hexadecimal) must the first two bytes of any BMP file be? (Leading bytes 
+   used to identify file formats (with high probability) are generally called "magic numbers.)"
+        BM in ASCII
+10. What’s the difference between bfSize and biSize?
+        bfSize - the size, in bytes, of the bitmap file
+        biSize - the number of bytes required by the bitmap header
+11. What does it mean if biHeight is negative?
+        a negative indicates a top down device independent bitmap where the origin is top left
+12. What field in BITMAPINFOHEADER specifies the BMP’s color depth (i.e., bits per pixel)?
+        biBitCount
+13. Why might fopen return NULL in copy.c:37?
+        It will return null if outfile specified is already created and is read only... 
+        If the file doesn't exist, the file will be created so this will not return null
+14. Why is the third argument to fread always 1 in our code?
+        It specifies number of elements read and the only element read is one BITMAPFILEHEADER
+        which is a struct
+15. What value does copy.c:70 assign padding if bi.biWidth is 3?
+        padding =  (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
+        The padding is equal to 3 because
+        (4 - (3 * 3 % 4)) % 4 evaluates to a 3
+16. What does fseek do?
+        fseek(inptr, padding, SEEK_CUR);
+        fseek moves the file pointer by the "padding" amount from the SEEK_CUR (current
+        position of the file pointer))
+17. What is SEEK_CUR?
+        SEEK_CUR is the current position of the file pointer
+18. whodunit?
+        Rick Astley
+        
