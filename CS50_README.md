@@ -2,25 +2,38 @@
 Harvards CS50 Coursework
 
 ```
-pset1
+* indicates a folder
+
+pset1*
   greedy.c - Outputs smallest required number of coins for given value
-hacker1
+hacker1*
   FtoC.c - A small fahrenheit to celsius converter that outputs a range of values
   credit.c - Credit card number checker for validity
   mario.c - Creates a mario pyramid with variable height
   water.c - Calculates bottles of water used during length of shower
-pset2
+pset2*
   caesar.c - Implements caesar cipher
   vigenere.c - Implements vigenere cipher
-hacker2
+hacker2*
   crack.c - Program to crack DES encryption algorithm (Spent a lot of time on this)
   initials.c - Program to output initials of given name
-pset3
+pset3*
   fifteen.c - a board game to sort 15 numbers in a 16 block board
-pset4
-  FILL
-  FILL
-pset5
+pset4*
+  bmp*
+    bmp.h - header file to define data types
+    clue.bmp - bitmap image with static
+    large.bmp - sample image to resize
+    resize.c - resizes bmp image by (1 - 100)
+    smiley.bmp - sample image to resize or "whodunit"
+    solution.bmp - solution to clue.bmp (reveals person under static)
+    whodunit.c - solves clue.bmp by clearing red static
+  jpg*
+    bmp.h - header file to define data types
+    card.raw - file to extract jpeg pictures from
+    recover.c - extracts jpgs from card.raw (compile and run, no args)
+  questions.txt - questions about the given program
+pset5*
   Makefile - automated compilar
   alice.txt - a sample text file to spell check
   alice_key.txt - alice.txt solutions after spellcheck
