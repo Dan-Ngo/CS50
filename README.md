@@ -3,7 +3,7 @@ Harvards CS50 Coursework
 
 * indicates a folder
 
-#pset1* - greedy algorithm
+#pset1* - Greedy algorithm
   `greedy.c - Outputs smallest required number of coins for given value`
 #hacker1* - Small C programs
   ```
@@ -24,7 +24,7 @@ Harvards CS50 Coursework
   ```
 #pset3* - Number sliding board game
   `fifteen.c - a board game to sort 15 numbers in a 16 block board`
-#pset4* - photo/recovery 
+#pset4* - Photo/recovery 
   ```
   bmp*
     bmp.h - header file to define data types
