@@ -3,28 +3,28 @@ Harvards CS50 Coursework
 
 * indicates a folder
 
-#pset1*
+#pset1* - greedy algorithm
   `greedy.c - Outputs smallest required number of coins for given value`
-#hacker1*
+#hacker1* - Small C programs
   ```
   FtoC.c - A small fahrenheit to celsius converter that outputs a range of values
   credit.c - Credit card number checker for validity
   mario.c - Creates a mario pyramid with variable height
   water.c - Calculates bottles of water used during length of shower
   ```
-#pset2*
+#pset2* Ciphers
   ```
   caesar.c - Implements caesar cipher
   vigenere.c - Implements vigenere cipher
   ```
-#hacker2*
+#hacker2* - DES encryption
   ```
   crack.c - Program to crack DES encryption algorithm (Spent a lot of time on this)
   initials.c - Program to output initials of given name
   ```
-#pset3*
+#pset3* - Number sliding board game
   `fifteen.c - a board game to sort 15 numbers in a 16 block board`
-#pset4*
+#pset4* - photo/recovery 
   ```
   bmp*
     bmp.h - header file to define data types
@@ -40,7 +40,7 @@ Harvards CS50 Coursework
     recover.c - extracts jpgs from card.raw (compile and run, no args)
   questions.txt - questions about the given program
   ```
-#pset5*
+#pset5* - Spellchecker 
   ```
   Makefile - automated compilar
   alice.txt - a sample text file to spell check
