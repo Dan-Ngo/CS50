@@ -4,7 +4,7 @@ Harvards CS50 Coursework
 ```
 * indicates a folder
 
-#pset1*
+# pset1*
   greedy.c - Outputs smallest required number of coins for given value
 #hacker1*
   FtoC.c - A small fahrenheit to celsius converter that outputs a range of values
