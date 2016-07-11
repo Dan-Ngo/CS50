@@ -50,3 +50,9 @@ Harvards CS50 Coursework
   questions.txt - questions about the given program
   speller.c - teacher written code to run dictionary.c and corresponding data
   ```
+#pset6* - Server 
+  ```
+  public* - contains various file formats to test the server program with
+  server.c - staff server program, I wrote the methods parse, load, indexes, and lookup
+  
+  ```
